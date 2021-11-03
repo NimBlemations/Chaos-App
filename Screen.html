@@ -10,15 +10,16 @@
       }
     </style>
   </head>
-  <body onload="startRhythmGame()" style="text-align:center">
-    <h1>You are playing rhythm game, have fun!</h1>
+  <body onload="startApp()" style="text-align:center">
+    <h1>App Zone</h1>
+    <!--This is just if you want a screen-->
     <script>
 
-      function startRhythmGame(){
-        rhythmGameArea.start();
+      function startApp(){
+        appArea.start();
       }
 
-      var rhythmGameArea = {
+      var appArea = {
         canvas : document.createElement("canvas"),
         start : function(){
           this.canvas.width = 1280;
