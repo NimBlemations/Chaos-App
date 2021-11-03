@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--You can do anything in an html file lmao, well maybe also in a Java file, but I'd rather choose html for people to use-->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <base target="_top">
+    <style>
+      canvas {
+        border: 1px solid #d3d3d3;
+        background-color: #c1c1c1;
+      }
+    </style>
+  </head>
+  <body onload="startApp()" style="text-align:center">
+    <h1>App Zone</h1>
+    <script>
+			
+      <!--Window zone-->
+      function startApp(){
+        appArea.start();
+      }
+
+      var appArea = {
+        canvas : document.createElement("canvas"),
+        start : function(){
+          this.canvas.width = 1280;
+          this.canvas.height = 720;
+          this.context = this.canvas.getContext("2d");
+          document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        }
+      }
+    </script>
+  </body>
+</html>
